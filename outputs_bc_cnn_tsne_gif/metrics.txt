@@ -1,0 +1,25 @@
+
+Borstkankermaand 🎗️ — 1D CNN + t-SNE animatie
+Vandaag een 1D Convolutioneel Netwerk getraind op de Breast Cancer Wisconsin dataset (569 cases, 30 features).
+In de GIF zie je hoe de voorspelde kansen door het model veranderen tijdens training:
+links: 2D t-SNE van alle cases, ingekleurd met P(benign); rechts: confusion matrix (validatie).
+
+Setup: epochs=120, batch_size=64, lr=0.001, weight_decay=0.0001, device=cpu
+Test: accuracy=0.904, ROC AUC=0.963
+Confusion matrix (test):
+[[34  8]
+ [ 3 69]]
+
+Reflectie:
+Achter elk datapunt schuilt een verhaal. Modellen ondersteunen, artsen beslissen.
+
+
+Volledig classification report:
+               precision    recall  f1-score   support
+
+malignant (0)       0.92      0.81      0.86        42
+   benign (1)       0.90      0.96      0.93        72
+
+     accuracy                           0.90       114
+    macro avg       0.91      0.88      0.89       114
+ weighted avg       0.90      0.90      0.90       114
